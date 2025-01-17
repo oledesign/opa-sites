@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-image-filter {
+    filter: grayscale(60%) brightness(0.7);
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 20s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Logo carousel animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.logo-scroll {
+  display: flex;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.logo-scroll:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .logo-scroll {
+    animation-duration: 20s;
+  }
+}

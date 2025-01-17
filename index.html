@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Perfect Apartment</title>
+    <style>
+      /* Custom styles for YouTube iframe */
+      #youtube-player iframe {
+        width: 300vw !important;
+        height: 300vh !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        pointer-events: none !important;
+      }
+
+      @media (max-aspect-ratio: 16/9) {
+        #youtube-player iframe {
+          width: 300vh !important;
+          height: 300vw !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
