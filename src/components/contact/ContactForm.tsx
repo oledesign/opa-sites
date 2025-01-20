@@ -46,7 +46,7 @@ Message:
 ${data.message}
     `);
     
-    window.location.href = `mailto:adixon@pmrcompanies.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:vvaldez@pmrcompanies.com?subject=${subject}&body=${body}`;
   };
 
   return (
